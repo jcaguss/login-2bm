@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <title>login</title>
+  </head>
+
+  <body>
+    <main class="conteiner__containers">
+      <section class="conteiner__form">
+        <img class="icono__flotante" src="./img/perfil.jpg" alt="user image" />
+        <form class="formulario" id="formulario">
+          <label for="email" class="formulario__lable email"
+            >Username or Email:</label
+          >
+          <input
+            class="formulario__input"
+            onblur="showErrors('email','formulario__input-error');"
+            type="email"
+            placeholder=" Username or Email "
+            name="email"
+            id="email"
+          />
+          <span id="formulario__input-error"></span>
+          <label for="password" class="formulario__lable password"
+            >Password:</label
+          >
+
+          <input
+            class="formulario__input"
+            onblur="showErrors('password','formulario__input-error1');"
+            type="password"
+            placeholder=" Password "
+            name="password"
+            id="password"
+          />
+          <span id="formulario__input-error1"></span>
+          <a href="">Forgot Password</a>
+          <button class="formulario__button transition" type="button">
+            Sign in
+          </button>
+        </form>
+      </section>
+      <section class="conteiner__img">
+        <h1 class="title__img">Title</h1>
+        <img class="imagen" src="./img/img1.jpg" alt="illustration image" />
+      </section>
+    </main>
+  </body>
+  <script src="/js/login.js"></script>
+</html>
