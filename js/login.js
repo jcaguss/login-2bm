@@ -1,3 +1,5 @@
+let showPass = false;
+
 const showErrors = (id, idMensaje) => {
   const elementNombre = document.getElementById(id);
   const elementError = document.getElementById(idMensaje);
@@ -14,5 +16,18 @@ const showErrors = (id, idMensaje) => {
   } else {
     elementError.style.visibility = "hidden";
     elementNombre.classList.remove("error");
+  }
+};
+const showPassword = () => {
+  const icon = document.querySelector("#showPassword");
+  const input = document.querySelector("#password");
+
+  showPass = !showPass;
+  if (showPass) {
+    icon.textContent = "visibility";
+    input.type = "text";
+  } else {
+    icon.textContent = "visibility_off";
+    input.type = "password";
   }
 };
